@@ -9,18 +9,18 @@
 <script>
   import Cat from '../components/Cat.html';
 
-  export default {    
+  export default {
      methods: {
-     
+
       addCat(isValid = true) {
         let model = this.get();
-        if (isValid && model.newCat) {        
+        if (isValid && model.newCat) {
           model.cats.push({'name': model.newCat});
-          this.set({cats: model.cats, count: model.cats.length, newCat: ''});                
+          this.set({cats: model.cats, count: model.cats.length, newCat: ''});
         }
-      },           
+      },
     },
-    
+
   components: {
     Cat,
   },
